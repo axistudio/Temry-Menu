@@ -23,7 +23,7 @@ html {
 
 body {
    background:
-      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../bg.png");
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../bg.webp");
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
@@ -239,10 +239,15 @@ a:hover {
    gap: 10px;
 }
 .item-card {
-   background: transparent;
-   -webkit-backdrop-filter: blur(20px);
-   backdrop-filter: blur(20px);
-   border: 1px solid rgba(255, 255, 255, 0.3);
+   background: linear-gradient(
+      135deg,
+      rgba(0, 30, 0, 0.85),
+      rgba(0, 0, 0, 0.9)
+   );
+   border: 1px solid rgba(11, 228, 0, 0.15);
+   box-shadow:
+      0 10px 20px rgba(0, 0, 0, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
    border-radius: 20px;
    padding: 16px 20px;
    display: flex;
@@ -251,8 +256,6 @@ a:hover {
    gap: 12px;
    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
    position: relative;
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-   transform: translateZ(0);
 }
 .item-card:hover {
    transform: translateY(-5px);
